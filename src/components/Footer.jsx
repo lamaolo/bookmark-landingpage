@@ -26,6 +26,17 @@ const Nav = styled.ul`
       color: hsl(0, 94%, 66%);
     }
   }
+
+  @media screen and (max-width: 769px) {
+    text-align: center;
+    display: block;
+    & li {
+      margin: 10px auto;
+      & a {
+        margin: 0;
+      }
+    }
+  }
 `;
 
 const Socials = styled.div`
@@ -41,46 +52,77 @@ const Socials = styled.div`
         brightness(97%) contrast(101%);
     }
   }
+
+  @media screen and (max-width: 769px) {
+    & a {
+      margin: 0 10px;
+    }
+  }
 `;
 
 const Footer = () => {
   return (
-    <FooterWrapper>
-      <div className="container">
-        <div className="row d-flex align-items-center">
-          <div className="col-3">
-            <figure>
-              <img src={logo} alt="Logo Bookmark" />
-            </figure>
-          </div>
+    <>
+      <FooterWrapper>
+        <div className="container">
+          <div className="row d-flex align-items-center justify-content-center">
+            <div className="col-12 col-md-3 text-center text-md-left">
+              <figure>
+                <img src={logo} alt="Logo Bookmark" />
+              </figure>
+            </div>
 
-          <div className="col-4">
-            <nav>
-              <Nav>
-                <li>
-                  <a href="/#">Features</a>
-                </li>
-                <li>
-                  <a href="/#">Pricing</a>
-                </li>
-                <li>
-                  <a href="/#">Contact</a>
-                </li>
-              </Nav>
-            </nav>
-          </div>
+            <div className="col-12 col-md-5 my-5 my-md-0 d-flex justify-content-center">
+              <nav>
+                <Nav>
+                  <li>
+                    <a href="/#">Features</a>
+                  </li>
+                  <li>
+                    <a href="/#">Pricing</a>
+                  </li>
+                  <li>
+                    <a href="/#">Contact</a>
+                  </li>
+                </Nav>
+              </nav>
+            </div>
 
-          <Socials className="col-5">
-            <a href="/#">
-              <img src={fbIcon} alt="Facebook icon" />
-            </a>
-            <a href="/#">
-              <img src={twIcon} alt="Twitter icon" />
-            </a>
-          </Socials>
+            <Socials className="col-12 col-md-4 text-center text-md-right">
+              <a href="/#">
+                <img src={fbIcon} alt="Facebook icon" />
+              </a>
+              <a href="/#">
+                <img src={twIcon} alt="Twitter icon" />
+              </a>
+            </Socials>
+          </div>
         </div>
-      </div>
-    </FooterWrapper>
+      </FooterWrapper>
+      <p
+        style={{
+          textAlign: "center",
+          color: "black",
+          fontSize: "1.4rem",
+          margin: "0",
+          padding: "8px 0",
+        }}
+      >
+        Challenge by{" "}
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://www.frontendmentor.io/challenges/bookmark-landing-page-5d0b588a9edda32581d29158"
+        >
+          FrontendMentor
+        </a>
+        . Coded by{" "}
+        <a target="_blank" rel="noreferrer" href="https://github.com/lamaolo">
+          Lucero Amaolo
+        </a>
+        .
+      </p>
+    </>
   );
 };
 

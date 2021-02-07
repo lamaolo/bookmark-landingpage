@@ -39,15 +39,27 @@ const Form = styled.form`
       background: white !important;
     }
   }
+  @media screen and (max-width: 769px) {
+    & {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    & button {
+      width: 100%;
+    }
+  }
 `;
 
 const InputContainer = styled.div`
-  position: relative;
   margin-right: 20px;
   z-index: 1000;
+  position: relative;
+  max-width: 256px;
   & input {
     height: 100%;
-    margin-right: 20px;
+    width: 95%;
+    margin: 0 auto;
     border: none;
     font-size: 1.4rem;
     outline: none;
@@ -63,20 +75,30 @@ const InputContainer = styled.div`
 
   & .error-message {
     position: absolute;
-    background: hsl(0, 94%, 66%);
-    left: -3px;
-    top: -3px;
-    width: 242px;
-    border-radius: 5px;
+    padding: 0 0 2px 8px;
+    width: 100%;
+    top: -5px;
     bottom: -25px;
-    right: -2px;
     display: flex;
     align-items: flex-end;
-    z-index: -10;
+    border-radius: 5px;
+    background: hsl(0, 94%, 66%);
     color: white;
     font-weight: 600;
     font-size: 1.3rem;
-    padding: 0 0 2px 8px;
+    z-index: -10;
+  }
+
+  @media screen and (max-width: 769px) {
+    & {
+      max-width: 100%;
+      width: 100%;
+      margin: 0 0 40px 0;
+    }
+
+    & input {
+      width: 98%;
+    }
   }
 `;
 
@@ -103,7 +125,7 @@ const Newsletter = () => {
 
   return (
     <Wrapper>
-      <Container>
+      <Container className="px-5 px-md-0">
         <p>35.000+ already joined</p>
         <h2>Stay up-to-date with what we're doing</h2>
         <Form onSubmit={handleSubmit}>

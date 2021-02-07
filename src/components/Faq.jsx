@@ -18,7 +18,7 @@ const Faq = () => {
   return (
     <section>
       <TextWrapper>
-        <div className="Faq-text">
+        <div className="Faq-text px-5 px-md-0">
           <h2 className="subtitulo">Frequently Asked Questions</h2>
           <p className="parrafo mt-4">
             Here are some of our FAQs. If you have any other questions you'd

@@ -15,6 +15,7 @@ const CardWrapper = styled.article`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  border-radius: 10px;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
 `;
 

@@ -32,22 +32,6 @@ const TabButton = styled.button`
   }
 `;
 
-const TabContent = styled.div`
-  margin: 50px 0;
-  position: relative;
-  &::before {
-    content: "";
-    position: absolute;
-    width: 35%;
-    height: 300px;
-    border-radius: 0 1000px 1000px 0;
-    background: #5266df;
-    left: 0;
-    bottom: -50px;
-    z-index: -10;
-  }
-`;
-
 const Features = () => {
   const [showTab, setShowTab] = useState(1);
 
@@ -57,7 +41,7 @@ const Features = () => {
 
   return (
     <section className="Features my-5">
-      <InfoWrapper className="Features-info">
+      <InfoWrapper className="Features-info px-4 px-md-0">
         <h2 className="subtitulo mb-5">Features</h2>
         <p className="parrafo">
           Our aim is to make it quick and easy for you to access your favourite
@@ -65,7 +49,7 @@ const Features = () => {
           then on the go.
         </p>
       </InfoWrapper>
-      <div className="Features-tabs d-flex justify-content-center">
+      <div className="Features-tabs px-5 px-md-0 d-flex flex-column flex-md-row justify-content-center">
         <TabButton
           onClick={() => handleChangeTab(1)}
           className={showTab === 1 && "active"}
@@ -85,13 +69,11 @@ const Features = () => {
           Easy Sharing
         </TabButton>
       </div>
-      <TabContent>
-        <div className="container">
-          {showTab === 1 && <FeatureOne />}
-          {showTab === 2 && <FeatureTwo />}
-          {showTab === 3 && <FeatureThree />}
-        </div>
-      </TabContent>
+      <div>
+        {showTab === 1 && <FeatureOne />}
+        {showTab === 2 && <FeatureTwo />}
+        {showTab === 3 && <FeatureThree />}
+      </div>
     </section>
   );
 };

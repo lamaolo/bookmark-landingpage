@@ -6,6 +6,9 @@ import arrow from "../static/images/icon-arrow.svg";
 const Wrapper = styled.article`
   border-top: 1px solid #e5e5e5;
   border-bottom: 1px solid #e5e5e5;
+  @media screen and (max-width: 769px) {
+    margin: 0 25px;
+  }
 `;
 
 const Title = styled.h3`
@@ -79,13 +82,14 @@ const FaqSpoiler = ({ title, description }) => {
     <Wrapper>
       <div className="d-flex justify-content-between align-items-center">
         <Button onClick={handleClick}>
-          <Title ref={titleText}>{title}</Title>
+          <Title ref={titleText}>{title || "Titulo por defecto"}</Title>
           <ArrowIcon ref={arrowIcon} src={arrow} alt="Open/Close icon" />
         </Button>
       </div>
       {showSpoiler && (
         <Spoiler>
           <p className="parrafo mb-0">
+            {/* Si no le paso la descripción, por defecto pone un Lorem Ipsum */}
             {description
               ? description
               : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias id necessitatibus accusamus itaque nulla accusantium dicta doloribus, optio nam culpa quam possimus qui tempora, hic eaque nostrum tenetur vel aliquam."}

@@ -55,6 +55,12 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 1.4rem;
   }
 
+  .unstyled-btn {
+    border: none;
+    outline: none;
+    background: none;
+  }
+
   .parrafo {
     font-size: 1.8rem;
     color: #aaabb0;
@@ -65,5 +71,19 @@ export const GlobalStyle = createGlobalStyle`
     color: #1c2039;
     font-weight: 600;
     font-size: 3.1rem;
+  }
+
+  .hamburgerButton {
+    display: none
+  }
+
+  @media screen and (max-width: 775px) {
+    .Menu {
+      display: none !important;
+    } 
+    
+    .hamburgerButton {
+      display: block;
+    }
   }
 `;

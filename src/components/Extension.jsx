@@ -17,14 +17,22 @@ const TextContainer = styled.div`
 
 const BrowserList = styled.div`
   display: flex;
+  @media screen and (max-width: 769px) {
+    flex-direction: column;
+    & > article {
+      margin-top: 10px !important;
+    }
+  }
 `;
 
 const Extension = () => {
   return (
     <Wrapper>
       <TextContainer>
-        <h2 className="subtitulo text-center">Download the extension</h2>
-        <p className="parrafo text-center mt-4">
+        <h2 className="subtitulo text-center px-4 px-md-0">
+          Download the extension
+        </h2>
+        <p className="parrafo text-center mt-4 px-4 px-md-0">
           We've got more browsers in the pipeline. Please do let us know if
           you've got a favourite you'd like us to prioritize.
         </p>

@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+
+import ResponsiveMenu from "./ResponsiveMenu";
+
 import logo from "../static/images/logo-bookmark.svg";
+import hamburgerIcon from "../static/images/icon-hamburger.svg";
 
 const HeaderWrapper = styled.header`
   height: 140px;
@@ -42,11 +46,15 @@ const Anchor = styled.a`
 `;
 
 const Header = () => {
+  const [showMenu, setShowMenu] = useState(false);
+
   return (
     <HeaderWrapper className="container">
-      <figure className="Logo">
-        <img src={logo} alt="Logo de Bookmark" />
-      </figure>
+      {showMenu === false && (
+        <figure className="Logo">
+          <img src={logo} alt="Logo de Bookmark" />
+        </figure>
+      )}
       <nav className="Menu d-flex">
         <Nav>
           <MenuItem>
@@ -63,6 +71,16 @@ const Header = () => {
           Login
         </Button>
       </nav>
+      {showMenu === false && (
+        <button
+          className="hamburgerButton unstyled-btn"
+          style={{ border: "none", background: "none" }}
+          onClick={() => setShowMenu(true)}
+        >
+          <img src={hamburgerIcon} alt="Open menu" />
+        </button>
+      )}
+      {showMenu === true && <ResponsiveMenu setShowMenu={setShowMenu} />}
     </HeaderWrapper>
   );
 };

@@ -24,8 +24,9 @@ const MenuItem = styled.li`
     display: block;
     font-family: "Rubik", sans-serif;
     text-transform: uppercase;
-    font-size: 1.5rem;
-    font-weight: 500;
+    font-size: 1.4rem;
+    font-weight: 400;
+    letter-spacing: 2px;
     color: hsl(229, 31%, 21%);
     text-decoration: none;
     transition: all 0.15s ease-in-out;

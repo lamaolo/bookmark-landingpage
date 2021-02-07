@@ -15,7 +15,7 @@ const Title = styled.h3`
   color: #1c2039;
   margin: 0;
   transition: all 0.15s ease-in-out;
-  font-weight: 600;
+  font-weight: 500;
   &.active {
     color: #fa5757;
   }

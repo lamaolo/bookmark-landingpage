@@ -18,14 +18,14 @@ const Container = styled.div`
     color: white;
     text-transform: uppercase;
     letter-spacing: 7px;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 1.4rem;
   }
 
   & h2 {
     margin: 30px 0;
     color: white;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 2.6rem;
   }
 `;

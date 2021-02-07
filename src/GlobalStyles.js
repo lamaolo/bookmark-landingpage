@@ -5,8 +5,8 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 62.5%;
   }
   
-  body {
-    font-family: 'Rubik', sans-serif;
+  * {
+    font-family: 'Rubik', sans-serif
   }
 
   ul, figure {
@@ -53,6 +53,10 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 1.4rem;
   }
 
+  h1 {
+    font-weight: 500 !important;
+  }
+
   .unstyled-btn {
     border: none;
     outline: none;
@@ -67,7 +71,7 @@ export const GlobalStyle = createGlobalStyle`
 
   .subtitulo {
     color: #1c2039;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 3.1rem;
   }
 
